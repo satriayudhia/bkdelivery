@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Flame Sans";
+  src: local("Flame Sans"), url(./assets/fonts/FlameSans.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Flame Bold";
+  src: local("Flame Bold"), url(./assets/fonts/FlameBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Flame Condensed";
+  src: local("Flame Condensed"),
+    url(./assets/fonts/FlameCondensed.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Flame Regular";
+  src: local("Flame Regular"),
+    url(./assets/fonts/FlameRegular.otf) format("opentype");
+}
+
+$primary: #ed7801;
+$red: #ff0000;
+$white: #ffffff;
+$orange: #faaf18;
+$gray: #919191;
+$chocolate: #8b542f;
+$peach: #fbe6d6;
+$dark: #502314;
+$discount: #d72300;
+$peach-2: #f9f4f2;
+$black: #404040;
+$light-grey: #b7b7b7;
+
+body {
+  margin: 0;
+  font-family: "Flame Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.font-regular {
+  font-family: "Flame Regular" !important;
+}
+
+.font-bold {
+  font-family: "Flame Bold" !important;
+}
+
+.container-content {
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.text-xs {
+  font-size: 10px;
+}
+
+.text-sm {
+  font-size: 13px;
+}
+
+.text-xl {
+  font-size: 20px;
+}
+
+.text-2xl {
+  font-size: 25px;
+}
+
+.text-3xl {
+  font-size: 30px;
+}
+
+.line-height-sm {
+  line-height: 5px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.navbar-bg {
+  background-color: #2d2d2d;
+}
+
+.bg-image {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./assets/images/bg.jpeg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-peach-2 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $peach-2;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-orange {
+  color: $orange;
+}
+
+.color-gray {
+  color: $gray;
+}
+
+.color-chocolate {
+  color: $chocolate;
+}
+
+.color-dark {
+  color: $dark;
+}
+
+.color-discount {
+  color: $discount;
+}
+
+.color-black {
+  color: $black;
+}
+
+.bg-default {
+  background-color: $primary !important;
+}
+
+.badge-cart {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: $red;
+  border-radius: 50%;
+  font-size: 12px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo {
+  width: 90px;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 90px;
+    height: 90px;
+    z-index: 10;
+  }
+}
+
+.gray-link {
+  color: $gray;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 8% !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 48px !important;
+  height: 48px !important;
+  background-image: none !important;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 30px;
+  color: $primary;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 30px;
+  color: $primary;
+}
+
+.carousel-indicators {
+  bottom: -45px !important;
+
+  button {
+    background-color: $primary !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50%;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+}
+
+.product-home-card {
+  background-color: $white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 15px -4px #6b6b6b;
+  padding: 20px;
+  height: 100%;
+}
+
+.btn-primary {
+  background-color: $primary !important;
+  border: 1px solid $primary !important;
+
+  &:focus-visible {
+    box-shadow: none !important;
+  }
+}
+
+.search-input {
+  outline: none;
+  border: none;
+  padding: 12px 60px 12px 17px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px -2px rgba(107, 107, 107, 0.3);
+}
+
+.btn-search {
+  background-color: $primary !important;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 48px;
+  width: 45px;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.category-card {
+  cursor: pointer;
+  font-family: "Flame Regular";
+  color: $dark;
+  background-color: $peach;
+  border-radius: 10px;
+  padding: 7px 20px 9px;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.category-card.active {
+  background-color: $orange;
+}
+
+.border-right {
+  border-right: 1px solid #e0e0e0;
+}
+
+.extras-img {
+  max-width: 50px;
+  height: auto;
+  object-fit: cover;
+}
+
+.extras-product {
+  font: 12px/18px "Flame Sans";
+  color: $black;
+}
+
+.extras-price {
+  font: 11px/18px "Flame Sans";
+  color: $light-grey;
+}
+
+.extras-plus {
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  font: 11px/18px "Flame Sans";
+  text-align: left;
+  margin: 10px 0px 20px;
+  border-collapse: collapse;
+
+  th {
+    color: $chocolate;
+    font-size: 11px;
+    vertical-align: top;
+    min-width: 50px;
+  }
+
+  td {
+    vertical-align: top;
+  }
+}
