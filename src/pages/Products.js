@@ -79,6 +79,14 @@ const Products = () => {
       type: "SET_CART",
       payload: payload,
     });
+    dispatch({
+      type: "SET_ALERT",
+      payload: {
+        isOpen: true,
+        message: `${productCart.qty} item added to cart`,
+        timer: 3000,
+      },
+    });
   };
 
   const addQty = () => {

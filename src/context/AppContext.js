@@ -6,6 +6,11 @@ const initialState = {
   carts: localStorage.getItem("carts")
     ? JSON.parse(localStorage.getItem("carts") || "")
     : [],
+  alert: {
+    isOpen: false,
+    message: "item added to cart",
+    timer: 3000,
+  },
 };
 
 const reducer = (state, action) => {
@@ -15,6 +20,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         carts: action.payload,
+      };
+    case "SET_ALERT":
+      return {
+        ...state,
+        alert: action.payload,
       };
     default:
       throw new Error();
